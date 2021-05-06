@@ -23,10 +23,10 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 function onStartBtnClick() {
+  refs.btnStart.setAttribute('disabled', true)
     intervalId = setInterval(() => {
         const randomColor = randomIntegerFromInterval(0, colors.length);
         refs.body.style.backgroundColor = colors[randomColor];
-        refs.btnStart.setAttribute('disabled', true)
        ;
     }, 1000);
 }
